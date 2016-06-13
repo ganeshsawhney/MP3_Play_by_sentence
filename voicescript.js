@@ -1,3 +1,10 @@
+
+
+function setCurTime(x) {
+	var audiovar = document.getElementById("aud");
+    audiovar.currentTime=x;
+}
+
 $(document).ready(function(){
 
 	var str = $('.WordSection1').text();
@@ -54,18 +61,18 @@ var t = hh+":"+mm+":"+ss;
 	    if(currentTime>=timedur[ind] && currentTime<timedur[ind+1])
 	    {
 	    			
-	    			$('#reading').html(' '+spans[ind].split('\n\n').join('<br><br>')+' । ');
+	    			$('#reading').html('<a href="javascript:setCurTime('+timedur[ind]+');"> '+spans[ind].split('\n\n').join('<br><br>')+'</a> । ');
 
 					$('#read').html('');
 					for (var cnt = 0; cnt < ind; cnt++)
 					{
-						$('#read').html($('#read').html()+spans[cnt].split('\n\n').join('<br><br>')+' । ');
+						$('#read').html($('#read').html()+'<a href="javascript:setCurTime('+timedur[cnt]+');">'+spans[cnt].split('\n\n').join('<br><br>')+' </a>। ');
 					}
 
 					$('#inque').html('');
 					for (var cnt = ind+1; cnt < spans.length; cnt++)
 					{
-						$('#inque').html($('#inque').html()+spans[cnt].split('\n\n').join('<br><br>')+' । ');
+						$('#inque').html($('#inque').html()+'<a href="javascript:setCurTime('+timedur[cnt]+');"> '+spans[cnt].split('\n\n').join('<br><br>')+' </a>। ');
 					}
 					t++;
 
@@ -85,18 +92,18 @@ var t = hh+":"+mm+":"+ss;
 					}
 				}
 				ind=ind-1;
-					$('#reading').html(' '+spans[ind].split('\n\n').join('<br><br>')+' । ');
+					$('#reading').html('<a href="javascript:setCurTime('+timedur[ind]+');"> '+spans[ind].split('\n\n').join('<br><br>')+'</a> । ');
 
 					$('#read').html('');
 					for (var cnt = 0; cnt < ind; cnt++)
 					{
-						$('#read').html($('#read').html()+spans[cnt].split('\n\n').join('<br><br>')+' । ');
+						$('#read').html($('#read').html()+'<a href="javascript:setCurTime('+timedur[cnt]+');">'+spans[cnt].split('\n\n').join('<br><br>')+' </a>। ');
 					}
 
 					$('#inque').html('');
 					for (var cnt = ind+1; cnt < spans.length; cnt++)
 					{
-						$('#inque').html($('#inque').html()+spans[cnt].split('\n\n').join('<br><br>')+' । ');
+						$('#inque').html($('#inque').html()+'<a href="javascript:setCurTime('+timedur[cnt]+');"> '+spans[cnt].split('\n\n').join('<br><br>')+' </a>। ');
 					}
 					t++;
 
