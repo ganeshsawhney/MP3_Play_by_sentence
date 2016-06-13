@@ -1,6 +1,6 @@
 var timedur = [0, 20.8, 26, 30, 34, 45, 56, 63, 69, 71.6, 77, 85, 90, 93, 98, 102.8, 110, 115];
 
-
+$('.WordSection1').hide();
 
 
 function setCurTime(x) {
