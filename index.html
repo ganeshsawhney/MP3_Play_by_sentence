@@ -4,11 +4,34 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<script src="jquery.min.js"></script>
 	<script type="text/javascript" src="responsivevoice.js"></script>
-	<script type="text/javascript" src="voicescript.js"></script>
 	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script src="http://www.google.com/jsapi"></script>
+<!-- load JQuery and UI from Google (need to use UI to animate colors) -->
+<script type="text/javascript">
+google.load("jqueryui", "1.5.2");
+</script>
 </head>
 <body>
 
+<audio id="aud" controls autoplay>
+  <source src="mp3/aud.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+Current Duration: <div id="current" style="display:inline;">0:00</div> sec <br>
+LeftOver Duration: <div id="duration" style="display:inline;">0:00</div> sec <br>
+
+
+<p class="MsoNormal" style="margin-left:.25in;text-align:justify;text-indent:.25in;line-height:150%">
+	<span lang="HI" style="font-size:14.0pt;line-height:150%;
+	font-family:&quot;Mangal&quot;,&quot;serif&quot;;color:black">
+		
+		<div id="read" class="markreadtext" style="display:inline;"></div>
+		<div id="reading" class="markreadingtext"  style="display:inline;font-size: 20px;"></div>
+		<div id="inque" class="markinquetext" style="display:inline;font-size: 20px;"></div>
+	
+	</span>
+</p>
 
 
 <div class="WordSection1" style="display:none">
@@ -643,5 +666,7 @@ line-height:150%;font-family:&quot;Mangal&quot;,&quot;serif&quot;;color:black">,
 </div>
 
 
+
+<script type="text/javascript" src="voicescript.js"></script>
 </body>
 </html>

@@ -1,4 +1,14 @@
-.marktext {
-	background-color: yellow;
+.markreadtext {
+	background-color: #FFE5B4;
 	font-size: 20px;
 }
+.markreadingtext {
+	background-color: #FFDB58;
+	font-size: 20px;
+}
+.markinquetext {
+	font-size: 20px;
+}
+#aud {
+ width: 100%;
+}​
