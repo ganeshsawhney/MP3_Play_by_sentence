@@ -1,3 +1,6 @@
+var timedur = [0, 20.8, 26, 30, 34, 45, 56, 63, 69, 71.6, 77, 85, 90, 93, 98, 102.8, 110, 115];
+
+
 
 
 function setCurTime(x) {
@@ -10,7 +13,6 @@ $(document).ready(function(){
 	var str = $('.WordSection1').text();
 	var spans = str.split('।');
 	var t=0;
-	var timedur = [0, 20.8, 26, 30, 34, 45, 56, 62, 69, 71.6, 77, 85, 90, 93, 98, 102.8, 110, 115];
 	var ind=0;
 
 	$("#aud").on(
