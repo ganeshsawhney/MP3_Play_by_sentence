@@ -2,6 +2,19 @@ var timedur = [0, 20.8, 26, 30, 34, 45, 56, 63, 69, 71.6, 77, 85, 90, 93, 98, 10
 
 $('.WordSection1').hide();
 
+window.onload = function () {
+ 
+  var v = document.getElementById("aud");
+  var p = document.getElementById("pbr");
+  var c = document.getElementById("currentPbr");
+
+  p.addEventListener('input',function(){
+    c.innerHTML = p.value;
+    v.playbackRate = p.value;
+  },false);
+
+};
+
 
 function setCurTime(x) {
 	var audiovar = document.getElementById("aud");
